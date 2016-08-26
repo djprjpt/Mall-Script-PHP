@@ -23,9 +23,12 @@ class Bootstrap {
                                 $mall = new Mall();
                                 break;
                             case Config_Req_Cat_Module::Category:
-                                require_once 'Crawling/category.php';
-                                $category = new Category();
-                                echo "Category";
+                                if (isset($args['mall']) && $args['mall'] != '') {
+                                    require_once 'Crawling/category.php';
+                                    $category = new Category($args['mall']);
+                                } else {
+                                    echo 'Error';
+                                }
                                 break;
                             case Config_Req_Cat_Module::Shop:
                                 require_once 'Crawling/shop.php';

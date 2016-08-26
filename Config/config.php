@@ -27,3 +27,12 @@ class Config_Req_Cat_Module {
     const Offer = 9;
 
 }
+
+class Config_Database {
+    
+    const DB_TYPE = 'mysql';
+    const DB_HOST = 'localhost';
+    const DB_NAME = Constants_DB::Database;
+    const DB_USER = 'root';
+    const DB_PASS = '';
+}

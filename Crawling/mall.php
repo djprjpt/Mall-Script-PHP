@@ -10,7 +10,7 @@
 class Mall {
 
     function __construct() {
-        
+        echo 'Mall called';
     }
 
 }
